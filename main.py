@@ -50,7 +50,7 @@ first_part = {self.first_part}
 second_part = {self.second_part}
 
 
-def decrypt(key):
+def decrypting(key: str) -> str:
     half = len(key)//2
 
     first_part_keys = list(first_part.keys())
@@ -68,7 +68,7 @@ def decrypt(key):
 
 
 with open('encrypted_keys.txt') as file:
-    private_keys = [decrypt(i.strip()) for i in file.readlines()]
+    private_keys = [decrypting(i.strip()) for i in file.readlines()]
 
 #   ^^^^^^^^^^^^ change this variable to variable in your code
 #   |||||||||||| ex: KEYS
